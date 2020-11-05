@@ -1,13 +1,17 @@
 package board
 
-import space.Group
-import space.Street
+import space.property.Group
+import space.housableproperty.Street
 import junit.framework.TestCase.assertEquals
 import org.junit.Before
 import org.junit.Test
 import player.Player
+import space.RentCalculator
+import space.housableproperty.Hotel
+import space.housableproperty.House
+import space.housableproperty.StreetRentScheme
 
-class RentCalculatorTest {
+class StreetRentCalculatorTest {
     private lateinit var rentCalculator : RentCalculator
     private lateinit var street: Street
 
@@ -17,20 +21,22 @@ class RentCalculatorTest {
         street = Street(
             "dorpsstraat",
             price = 60,
-            flatRent = 2,
-            oneHouseRent = 10,
-            twoHousesRent = 30,
-            threeHousesRent = 90,
-            fourHousesRent = 160,
-            hotelRent = 250,
             costOfHouse = 50,
-            mortgageValue = 30
+            mortgageValue = 30,
+            rentScheme = StreetRentScheme(
+                flatRent = 2,
+                oneHouseRent = 10,
+                twoHousesRent = 30,
+                threeHousesRent = 90,
+                fourHousesRent = 160,
+                hotelRent = 250
+            )
         )
     }
 
     @Test
     fun testWhenStreetDoesNotHaveAnyHousesAndPlayerDoesNotOwnAllPropertiesThenRentIsFPrice() {
-        val street2 = Street("1", 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        val street2 = Street("1", 0, 0, 0)
         val group = Group()
         val player = Player()
         street.owner = player
@@ -42,9 +48,9 @@ class RentCalculatorTest {
     @Test
     fun testWhenPlayerOwnsAllPropertiesOfColorThenFlatRentIsDoubled() {
         val group = Group()
-        val street2 = Street("1", 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        val street3 = Street("1", 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        val street4 = Street("1", 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        val street2 = Street("1", 0, 0, 0)
+        val street3 = Street("1", 0, 0, 0)
+        val street4 = Street("1", 0, 0, 0)
         val player = Player()
         street.owner = player
         street2.owner = player

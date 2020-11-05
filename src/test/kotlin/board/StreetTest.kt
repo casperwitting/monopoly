@@ -1,11 +1,10 @@
 package board
 
-import space.AddBuildingException
-import space.Street
 import junit.framework.TestCase.assertEquals
 import org.junit.Before
 import org.junit.Test
 import player.Player
+import space.housableproperty.*
 
 class StreetTest {
     private lateinit var street: Street
@@ -15,14 +14,16 @@ class StreetTest {
         street = Street(
             "dorpsstraat",
             price = 60,
-            flatRent = 2,
-            oneHouseRent = 10,
-            twoHousesRent = 30,
-            threeHousesRent = 90,
-            fourHousesRent = 160,
-            hotelRent = 250,
             costOfHouse = 50,
-            mortgageValue = 30
+            mortgageValue = 30,
+            rentScheme = StreetRentScheme(
+                flatRent = 2,
+                oneHouseRent = 10,
+                twoHousesRent = 30,
+                threeHousesRent = 90,
+                fourHousesRent = 160,
+                hotelRent = 250
+            )
         )
     }
 

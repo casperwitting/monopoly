@@ -1,12 +1,12 @@
 package gameplay.rules
 
-import board.*
-import space.Property
+import space.property.Property
 import board.Space
 import payment.Payable
 import payment.PaymentHandler
 import payment.PaymentInformation
 import player.Player
+import space.RentCalculator
 
 /*
  * When a player lands on an unowned property, property is always bought by player

@@ -1,4 +1,6 @@
-package board
+package space
+
+import board.Space
 
 class IncomeTax() : Space {
     override var price = 200

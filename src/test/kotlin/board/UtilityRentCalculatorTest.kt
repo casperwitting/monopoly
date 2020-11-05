@@ -1,11 +1,12 @@
 package board
 
-import space.Group
-import space.Utility
+import space.property.Group
+import space.property.Utility
 import junit.framework.TestCase.assertEquals
 import org.junit.Before
 import org.junit.Test
 import player.Player
+import space.RentCalculator
 
 class UtilityRentCalculatorTest {
     private lateinit var utility1: Utility

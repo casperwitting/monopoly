@@ -1,15 +1,20 @@
 package board
 
 import space.*
+import space.housableproperty.Street
+import space.housableproperty.StreetRentScheme
+import space.property.Group
+import space.property.RailRoad
+import space.property.Utility
 
 class BoardFactory {
     fun makeBoard(): Board {
         val board = Board()
 
         val ourVillageGroup = Group()
-        val dorpsStraat = Street("DORPSTRAAT", 60, 2, 10, 30, 90, 160, 250, 50, 30)
-        val brink = Street("BRINK", 60, 2, 10, 30, 90, 160, 250, 50, 30)
-        val vissteeg = Street("VISSTEEG", 60, 2, 10, 30, 90, 160, 250, 50, 30)
+        val dorpsStraat = Street("DORPSTRAAT", 60, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val brink = Street("BRINK", 60, 50, 30, StreetRentScheme( 2, 10, 30, 90, 160, 250))
+        val vissteeg = Street("VISSTEEG", 60,  50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
         ourVillageGroup.addProperties(listOf(dorpsStraat, brink, vissteeg))
 
         val stations = Group()
@@ -20,10 +25,10 @@ class BoardFactory {
         stations.addProperties(listOf(stationZuid, stationWest, stationNoord, stationOost))
 
         val arnhem = Group()
-        val steenstraat = Street("STEENSTRAAT", 100, 2, 10, 30, 90, 160, 250, 50, 30)
-        val ketelStraat = Street("KETELSTRAAT", 100, 2, 10, 30, 90, 160, 250, 50, 30)
-        val velperPlein = Street("VELPERPLEIN", 100, 2, 10, 30, 90, 160, 250, 50, 30)
-        val koreMarkt = Street("KOREMARKT", 120, 2, 10, 30, 90, 160, 250, 50, 30)
+        val steenstraat = Street("STEENSTRAAT", 100,  50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val ketelStraat = Street("KETELSTRAAT", 100, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val velperPlein = Street("VELPERPLEIN", 100, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val koreMarkt = Street("KOREMARKT", 120, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
         arnhem.addProperties(listOf(steenstraat, ketelStraat, velperPlein, koreMarkt))
 
         val utilities = Group()
@@ -33,44 +38,44 @@ class BoardFactory {
         utilities.addProperties(listOf(elektriciteit, gasfabriek, waterleiding))
 
         val haarlem = Group()
-        val bartelorisStraat = Street("BARTELORISSTRAAT", 140, 2, 10, 30, 90, 160, 250, 50, 30)
-        val zijlweg = Street("ZIJLWEG", 140, 2, 10, 30, 90, 160, 250, 50, 30)
-        val houtStraat = Street("HOUTSTRAAT", 140, 2, 10, 30, 90, 160, 250, 50, 30)
-        val spaarne = Street("SPAARNE", 160, 2, 10, 30, 90, 160, 250, 50, 30)
+        val bartelorisStraat = Street("BARTELORISSTRAAT", 140, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val zijlweg = Street("ZIJLWEG", 140, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val houtStraat = Street("HOUTSTRAAT", 140, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val spaarne = Street("SPAARNE", 160, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
         haarlem.addProperties(listOf(bartelorisStraat, zijlweg, houtStraat, spaarne))
 
         val utrecht = Group()
-        val neude = Street("NEUDE", 180, 2, 10, 30, 90, 160, 250, 50, 30)
-        val biltStraat = Street("BILTSTRAAT", 180, 2, 10, 30, 90, 160, 250, 50, 30)
-        val vreeburg = Street("VREEBURG", 200, 2, 10, 30, 90, 160, 250, 50, 30)
-        val domPlein = Street("DOMPLEIN", 200, 2, 10, 30, 90, 160, 250, 50, 30)
+        val neude = Street("NEUDE", 180, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val biltStraat = Street("BILTSTRAAT", 180, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val vreeburg = Street("VREEBURG", 200, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val domPlein = Street("DOMPLEIN", 200, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
         utrecht.addProperties(listOf(neude, biltStraat, vreeburg, domPlein))
 
         val groningen = Group()
-        val kerkhof = Street("A-KERKHOF", 220, 2, 10, 30, 90, 160, 250, 50, 30)
-        val groteMarkt = Street("GROTE MARKT", 220, 2, 10, 30, 90, 160, 250, 50, 30)
-        val hereStraat = Street("HERESTRAAT", 240, 2, 10, 30, 90, 160, 250, 50, 30)
-        val turfTorenStraat = Street("TURFTORENSTRAAT", 240, 2, 10, 30, 90, 160, 250, 50, 30)
+        val kerkhof = Street("A-KERKHOF", 220, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val groteMarkt = Street("GROTE MARKT", 220, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val hereStraat = Street("HERESTRAAT", 240, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val turfTorenStraat = Street("TURFTORENSTRAAT", 240, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
         groningen.addProperties(listOf(kerkhof, groteMarkt, hereStraat, turfTorenStraat))
 
         val sGravenhage = Group()
-        val spui = Street("SPUI", 260, 2, 10, 30, 90, 160, 250, 50, 30)
-        val plein = Street("PLEIN", 260, 2, 10, 30, 90, 160, 250, 50, 30)
-        val langePoten = Street("LANGE POTEN", 280, 2, 10, 30, 90, 160, 250, 50, 30)
-        val binnenHof = Street("BINNENHOF", 280, 2, 10, 30, 90, 160, 250, 50, 30)
+        val spui = Street("SPUI", 260, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val plein = Street("PLEIN", 260, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val langePoten = Street("LANGE POTEN", 280, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val binnenHof = Street("BINNENHOF", 280, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
         sGravenhage.addProperties(listOf(spui, plein, langePoten, binnenHof))
 
         val rotterdam = Group()
-        val hofPlein = Street("HOFPLEIN", 300, 2, 10, 30, 90, 160, 250, 50, 30)
-        val blaak = Street("BLAAK", 300, 2, 10, 30, 90, 160, 250, 50, 30)
-        val coolSingel = Street("COOLSINGEL", 300, 2, 10, 30, 90, 160, 250, 50, 30)
-        val heemRaads = Street("HEEMRAADS", 320, 2, 10, 30, 90, 160, 250, 50, 30)
+        val hofPlein = Street("HOFPLEIN", 300, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val blaak = Street("BLAAK", 300, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val coolSingel = Street("COOLSINGEL", 300, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val heemRaads = Street("HEEMRAADS", 320, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
         rotterdam.addProperties(listOf(hofPlein, blaak, coolSingel, heemRaads))
 
         val amsterdam = Group()
-        val leidseStraat = Street("LEIDSESTRAAT", 350, 2, 10, 30, 90, 160, 250, 50, 30)
-        val kalverStraat = Street("KALVERSTRAAT", 350, 2, 10, 30, 90, 160, 250, 50, 30)
-        val dam = Street("DAM", 400, 2, 10, 30, 90, 160, 250, 50, 30)
+        val leidseStraat = Street("LEIDSESTRAAT", 350, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val kalverStraat = Street("KALVERSTRAAT", 350, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
+        val dam = Street("DAM", 400, 50, 30, StreetRentScheme(2, 10, 30, 90, 160, 250))
         amsterdam.addProperties(listOf(leidseStraat, kalverStraat, dam))
 
         board.spaces.add(Start())

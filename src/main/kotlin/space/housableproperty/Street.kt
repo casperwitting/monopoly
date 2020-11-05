@@ -1,21 +1,14 @@
-package space
+package space.housableproperty
 
-import board.Building
-import board.Hotel
-import board.House
 import player.Player
+import space.property.PropertyGroup
 
 class Street(
     override var description: String,
     override var price: Int,
-    override val flatRent: Int,
-    override val oneHouseRent: Int,
-    override val twoHousesRent: Int,
-    override val threeHousesRent: Int,
-    override val fourHousesRent: Int,
-    override val hotelRent: Int,
     override val costOfHouse: Int,
-    val mortgageValue: Int
+    val mortgageValue: Int,
+    override val rentScheme: RentScheme = NullRentScheme()
 ) : HousableProperty {
     override lateinit var owner: Player
     override var buildings = mutableListOf<Building>()

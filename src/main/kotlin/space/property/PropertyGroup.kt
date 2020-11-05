@@ -1,4 +1,4 @@
-package space
+package space.property
 
 interface PropertyGroup {
     fun addProperty(property: Property)

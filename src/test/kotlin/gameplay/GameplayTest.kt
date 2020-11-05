@@ -1,8 +1,8 @@
 package gameplay
 
 import board.Space
-import space.HousableProperty
-import space.Property
+import space.housableproperty.HousableProperty
+import space.property.Property
 import gameplay.rules.LandOnSpaceRuleFactory
 import gameplay.rules.SpaceRule
 import gameplay.rules.PassStartRule

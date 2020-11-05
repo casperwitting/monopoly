@@ -1,7 +1,7 @@
 package gameplay.rules
 
 import space.CommunityChest
-import space.Street
+import space.housableproperty.Street
 import junit.framework.TestCase
 import org.junit.Before
 import org.junit.Test
@@ -9,6 +9,7 @@ import org.junit.Test
 import payment.Bank
 import payment.Bill
 import player.Player
+import space.housableproperty.NullRentScheme
 
 class LandOnCommunityChestRuleTest {
     lateinit var landOnCommunityChest: LandOnCommunityChestRule
@@ -24,7 +25,12 @@ class LandOnCommunityChestRuleTest {
 
     @Test
     fun testWhenSpaceIsStreetThenRuleDoesNotApply() {
-        val space = Street("Dorpsstraat", 60, 2, 10, 30, 90, 160, 250, 50, 30)
+        val space = Street(
+            description = "Dorpsstraat",
+            price = 60,
+            costOfHouse = 50,
+            mortgageValue = 30
+        )
 
         TestCase.assertFalse(landOnCommunityChest.ruleApplies(space, player))
     }

@@ -2,7 +2,7 @@ package gameplay.rules
 
 import space.CommunityChest
 import space.Start
-import space.Street
+import space.housableproperty.Street
 import junit.framework.TestCase
 import org.junit.Before
 import org.junit.Test
@@ -23,7 +23,12 @@ class PassStartRuleTest {
 
     @Test
     fun testWhenSpaceIsStreetThenRuleDoesNotApply() {
-        val space = Street("Dorpsstraat", 60, 2, 10, 30, 90, 160, 250, 50, 30)
+        val space = Street(
+            description = "Dorpsstraat",
+            price = 60,
+            costOfHouse = 50,
+            mortgageValue = 30
+        )
 
         TestCase.assertFalse(passStartAction.ruleApplies(space, player))
     }

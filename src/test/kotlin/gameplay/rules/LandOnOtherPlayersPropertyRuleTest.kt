@@ -1,7 +1,7 @@
 package gameplay.rules
 
-import space.Group
-import space.Street
+import space.property.Group
+import space.housableproperty.Street
 import junit.framework.TestCase.assertFalse
 import junit.framework.TestCase.assertTrue
 import org.junit.Before
@@ -9,6 +9,7 @@ import org.junit.Test
 import payment.Bank
 import payment.Bill
 import player.Player
+import space.housableproperty.StreetRentScheme
 
 class LandOnOtherPlayersPropertyRuleTest {
     lateinit var landOnOtherPlayersPropertyAction: LandOnOtherPlayersPropertyRule
@@ -19,7 +20,20 @@ class LandOnOtherPlayersPropertyRuleTest {
     @Before
     fun setUp() {
         landOnOtherPlayersPropertyAction = LandOnOtherPlayersPropertyRule()
-        street = Street("Dorpsstraat", 60, 2, 10, 30, 90, 160, 250, 50, 30)
+        street = Street(
+            description = "Dorpsstraat",
+            price = 60,
+            costOfHouse = 50,
+            mortgageValue = 30,
+            rentScheme = StreetRentScheme(
+                flatRent = 2,
+                oneHouseRent = 10,
+                twoHousesRent = 30,
+                threeHousesRent = 90,
+                fourHousesRent = 160,
+                hotelRent = 250
+            )
+        )
         val group = Group()
         group.addProperty(street)
         player = Player()
@@ -47,7 +61,7 @@ class LandOnOtherPlayersPropertyRuleTest {
     }
 
     @Test
-    fun testWhenLadingOnOtherPlayersStreetThenRentIsPayedToOwner() {
+    fun testWhenLadingOnOtherPlayersStreetThenRentIsPaidToOwner() {
         val otherPlayer = Player()
         street.owner = otherPlayer
 

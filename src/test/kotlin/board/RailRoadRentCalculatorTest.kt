@@ -1,11 +1,12 @@
 package board
 
-import space.Group
-import space.RailRoad
+import space.property.Group
+import space.property.RailRoad
 import junit.framework.TestCase.assertEquals
 import org.junit.Before
 import org.junit.Test
 import player.Player
+import space.RentCalculator
 
 class RailRoadRentCalculatorTest {
     private lateinit var railRoad1: RailRoad

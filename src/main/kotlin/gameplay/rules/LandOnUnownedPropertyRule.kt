@@ -1,6 +1,6 @@
 package gameplay.rules
 
-import space.Property
+import space.property.Property
 import board.Space
 import payment.Payable
 import payment.PaymentHandler

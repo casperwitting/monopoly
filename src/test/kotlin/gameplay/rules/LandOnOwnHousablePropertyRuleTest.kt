@@ -1,6 +1,6 @@
 package gameplay.rules
 
-import space.Street
+import space.housableproperty.Street
 import junit.framework.TestCase.*
 import org.junit.Before
 import org.junit.Test
@@ -17,7 +17,12 @@ class LandOnOwnHousablePropertyRuleTest {
     @Before
     fun setUp() {
         landOnOwnPropertyAction = LandOnOwnPropertyRule()
-        street = Street("Dorpsstraat", 60, 2, 10, 30, 90, 160, 250, 50, 30)
+        street = Street(
+            description = "Dorpsstraat",
+            price = 60,
+            costOfHouse = 50,
+            mortgageValue = 30
+        )
         player = Player()
         bank = Bank()
     }

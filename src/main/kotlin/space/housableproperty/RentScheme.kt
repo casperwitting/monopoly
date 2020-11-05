@@ -1,14 +1,10 @@
-package space
+package space.housableproperty
 
-import board.Building
-
-interface HousableProperty : Property {
+interface RentScheme {
     val flatRent: Int
     val oneHouseRent: Int
     val twoHousesRent: Int
     val threeHousesRent: Int
     val fourHousesRent: Int
     val hotelRent: Int
-    val costOfHouse: Int
-    var buildings: MutableList<Building>
 }

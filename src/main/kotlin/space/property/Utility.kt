@@ -1,13 +1,13 @@
-package space
+package space.property
 
 import player.Player
 
-class RailRoad(
+class Utility(
     override var description: String
 ) : Property {
     override lateinit var owner: Player
     override lateinit var group: PropertyGroup
-    override var price = 200
+    override var price = 150
 
     override fun isOwned(): Boolean {
         return this::owner.isInitialized

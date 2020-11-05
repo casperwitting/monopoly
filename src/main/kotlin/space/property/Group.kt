@@ -1,4 +1,4 @@
-package space
+package space.property
 
 class Group : PropertyGroup {
     override fun addProperty(property: Property) {

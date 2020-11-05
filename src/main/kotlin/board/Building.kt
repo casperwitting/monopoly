@@ -1,5 +1,0 @@
-package board
-
-interface Building {
-
-}

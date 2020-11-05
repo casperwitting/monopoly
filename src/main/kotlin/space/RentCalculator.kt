@@ -1,15 +1,17 @@
-package board
+package space
 
-import space.HousableProperty
-import space.Property
-import space.RailRoad
-import space.Utility
+import space.housableproperty.Hotel
+import space.housableproperty.House
+import space.housableproperty.HousableProperty
+import space.property.Property
+import space.property.RailRoad
+import space.property.Utility
 
 class RentCalculator {
     fun getRentPrice(property: Property, amountRolled: Int = 0): Int {
         if (property is HousableProperty) {
             if (property.buildings.filterIsInstance<Hotel>().count() > 0) {
-                return property.hotelRent
+                return property.rentScheme.hotelRent
             }
 
             when (property.buildings.filterIsInstance<House>().count()) {
@@ -22,22 +24,22 @@ class RentCalculator {
                     }
 
                     if (ownsAllProperties) {
-                        return property.flatRent * 2
+                        return property.rentScheme.flatRent * 2
                     }
 
-                    return property.flatRent
+                    return property.rentScheme.flatRent
                 }
                 1 -> {
-                    return property.oneHouseRent
+                    return property.rentScheme.oneHouseRent
                 }
                 2 -> {
-                    return property.twoHousesRent
+                    return property.rentScheme.twoHousesRent
                 }
                 3 -> {
-                    return property.threeHousesRent
+                    return property.rentScheme.threeHousesRent
                 }
                 4 -> {
-                    return property.fourHousesRent
+                    return property.rentScheme.fourHousesRent
                 }
             }
         }

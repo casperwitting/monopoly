@@ -1,6 +1,6 @@
 package gameplay.rules
 
-import board.IncomeTax
+import space.IncomeTax
 import board.Space
 import payment.Payable
 import payment.PaymentHandler

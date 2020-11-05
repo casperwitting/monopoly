@@ -1,8 +1,8 @@
 package gameplay.rules
 
 import space.CommunityChest
-import board.IncomeTax
-import space.Street
+import space.IncomeTax
+import space.housableproperty.Street
 import junit.framework.TestCase
 import org.junit.Before
 import org.junit.Test
@@ -21,7 +21,12 @@ class LandOnIncomeTaxRuleTest {
 
     @Test
     fun testWhenSpaceIsStreetThenRuleDoesNotApply() {
-        val space = Street("Dorpsstraat", 60, 2, 10, 30, 90, 160, 250, 50, 30)
+        val space = Street(
+            description = "Dorpsstraat",
+            price = 60,
+            costOfHouse = 50,
+            mortgageValue = 30
+        )
         val player = Player()
 
         TestCase.assertFalse(landOnIncomeTaxAction.ruleApplies(space, player))

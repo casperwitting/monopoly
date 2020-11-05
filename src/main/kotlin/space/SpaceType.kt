@@ -1,4 +1,4 @@
-package board.space
+package space
 
 enum class SpaceType {
     START,

@@ -1,7 +1,7 @@
 package gameplay.rules
 
 import board.House
-import board.space.HousableProperty
+import space.HousableProperty
 import board.Space
 import payment.Payable
 import payment.PaymentHandler

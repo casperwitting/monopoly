@@ -1,7 +1,7 @@
 package board
 
-import board.space.Group
-import board.space.Street
+import space.Group
+import space.Street
 import junit.framework.TestCase.assertEquals
 import org.junit.Before
 import org.junit.Test

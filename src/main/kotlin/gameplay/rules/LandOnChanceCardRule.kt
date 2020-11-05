@@ -1,6 +1,6 @@
 package gameplay.rules
 
-import board.space.ChanceCard
+import space.ChanceCard
 import board.Space
 import payment.Payable
 import payment.PaymentHandler

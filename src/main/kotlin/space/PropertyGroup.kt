@@ -1,4 +1,4 @@
-package board.space
+package space
 
 interface PropertyGroup {
     fun addProperty(property: Property)

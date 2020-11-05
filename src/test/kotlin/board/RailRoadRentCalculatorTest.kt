@@ -1,7 +1,7 @@
 package board
 
-import board.space.Group
-import board.space.RailRoad
+import space.Group
+import space.RailRoad
 import junit.framework.TestCase.assertEquals
 import org.junit.Before
 import org.junit.Test

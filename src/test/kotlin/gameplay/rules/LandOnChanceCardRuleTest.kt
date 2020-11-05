@@ -1,8 +1,8 @@
 package gameplay.rules
 
-import board.space.ChanceCard
-import board.space.CommunityChest
-import board.space.Street
+import space.ChanceCard
+import space.CommunityChest
+import space.Street
 import junit.framework.TestCase
 import org.junit.Before
 import org.junit.Test

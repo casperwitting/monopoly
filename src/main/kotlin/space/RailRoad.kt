@@ -1,4 +1,4 @@
-package board.space
+package space
 
 import player.Player
 

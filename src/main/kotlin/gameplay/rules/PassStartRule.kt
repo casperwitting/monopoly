@@ -1,7 +1,7 @@
 package gameplay.rules
 
 import board.Space
-import board.space.Start
+import space.Start
 import payment.Payable
 import payment.PaymentHandler
 import payment.PaymentInformation

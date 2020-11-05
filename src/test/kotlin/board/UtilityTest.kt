@@ -1,6 +1,6 @@
 package board
 
-import board.space.Utility
+import space.Utility
 import junit.framework.TestCase
 import org.junit.Before
 import org.junit.Test

@@ -1,7 +1,7 @@
 package board
 
-import board.space.Card
-import board.space.CommunityChest
+import space.Card
+import space.CommunityChest
 import junit.framework.TestCase.assertTrue
 import org.junit.Test
 

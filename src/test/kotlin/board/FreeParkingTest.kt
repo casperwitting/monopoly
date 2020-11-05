@@ -1,6 +1,6 @@
 package board
 
-import board.space.FreeParking
+import space.FreeParking
 import junit.framework.TestCase
 import org.junit.Before
 import org.junit.Test

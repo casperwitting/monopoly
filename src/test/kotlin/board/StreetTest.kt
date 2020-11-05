@@ -1,6 +1,7 @@
 package board
 
-import board.space.Street
+import space.AddBuildingException
+import space.Street
 import junit.framework.TestCase.assertEquals
 import org.junit.Before
 import org.junit.Test

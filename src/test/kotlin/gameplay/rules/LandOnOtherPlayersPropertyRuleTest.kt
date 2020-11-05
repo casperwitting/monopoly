@@ -1,7 +1,7 @@
 package gameplay.rules
 
-import board.space.Group
-import board.space.Street
+import space.Group
+import space.Street
 import junit.framework.TestCase.assertFalse
 import junit.framework.TestCase.assertTrue
 import org.junit.Before

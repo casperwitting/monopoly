@@ -1,9 +1,9 @@
 package board
 
-import board.space.HousableProperty
-import board.space.Property
-import board.space.RailRoad
-import board.space.Utility
+import space.HousableProperty
+import space.Property
+import space.RailRoad
+import space.Utility
 
 class RentCalculator {
     fun getRentPrice(property: Property, amountRolled: Int = 0): Int {

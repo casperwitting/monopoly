@@ -1,8 +1,8 @@
 package gameplay.rules
 
-import board.space.CommunityChest
+import space.CommunityChest
 import board.IncomeTax
-import board.space.Street
+import space.Street
 import junit.framework.TestCase
 import org.junit.Before
 import org.junit.Test

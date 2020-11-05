@@ -1,6 +1,6 @@
 package gameplay.rules
 
-import board.space.CommunityChest
+import space.CommunityChest
 import board.Space
 import payment.Payable
 import payment.PaymentHandler

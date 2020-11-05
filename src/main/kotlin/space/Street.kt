@@ -1,6 +1,5 @@
-package board.space
+package space
 
-import board.AddBuildingException
 import board.Building
 import board.Hotel
 import board.House

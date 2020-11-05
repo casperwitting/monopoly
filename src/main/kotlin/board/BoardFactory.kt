@@ -1,6 +1,6 @@
 package board
 
-import board.space.*
+import space.*
 
 class BoardFactory {
     fun makeBoard(): Board {

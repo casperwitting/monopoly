@@ -1,8 +1,8 @@
 package gameplay.rules
 
-import board.space.RailRoad
-import board.space.Street
-import board.space.Utility
+import space.RailRoad
+import space.Street
+import space.Utility
 import junit.framework.TestCase.*
 import org.junit.Before
 import org.junit.Test

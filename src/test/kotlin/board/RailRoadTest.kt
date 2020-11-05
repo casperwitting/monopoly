@@ -1,6 +1,6 @@
 package board
 
-import board.space.RailRoad
+import space.RailRoad
 import junit.framework.TestCase
 import org.junit.Before
 import org.junit.Test
